@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ClassRoom</string>
+    <string name="back_button">Back</string>
+    <string name="class_name">DS SV</string>
+    <string name="back">Back</string>
+    <string name="more_options">More options</string>
+    <string name="add">Add</string>
+    <string name="delete">Delete</string>
+</resources>
