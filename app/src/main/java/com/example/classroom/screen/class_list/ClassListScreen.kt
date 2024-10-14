@@ -1,6 +1,5 @@
 package com.example.classroom.screen.class_list
 
-import ClassDetail
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -18,9 +17,9 @@ import com.example.classroom.screen.student_list.ClassListModel
 @Composable
 fun ClassListScreen(
     modifier: Modifier = Modifier,
-    onClassClicked: (Int) -> Unit,
+    onClassClicked: (String) -> Unit,
     isDeleteMode: Boolean = false,
-    onClassDeleted: (Int) -> Unit = {},
+    onClassDeleted: (String) -> Unit = {},
     classes: List<ClassDetail>
 ) {
     Column(modifier = modifier) {
@@ -44,7 +43,6 @@ fun ClassListScreen(
                 }
                 ClassListModel(
                     id = classItem.id,
-                    malop = classItem.classId,
                     name = classItem.className,
                     onClick = { if (!isDeleteMode) onClassClicked(classItem.id) }
                 )

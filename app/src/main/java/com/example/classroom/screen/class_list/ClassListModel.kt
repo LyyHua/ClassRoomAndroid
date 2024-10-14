@@ -11,10 +11,9 @@ import androidx.compose.ui.Modifier
 @Composable
 fun ClassListModel(
     modifier: Modifier = Modifier,
-    id: Int,
-    malop: String,
+    id: String,
     name: String,
-    onClick: (Int) -> Unit
+    onClick: (String) -> Unit
 ) {
     Row(
         modifier = modifier
@@ -22,7 +21,7 @@ fun ClassListModel(
             .clickable { onClick(id) },
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
-        Text(text = malop)
+        Text(text = id)
         Text(text = name)
     }
 }

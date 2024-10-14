@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import com.example.classroom.sqlite.Repository
 import com.example.classroom.ui.theme.ClassRoomTheme
 
 class MainActivity : ComponentActivity() {
@@ -17,7 +18,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ClassRoomTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerpadding ->
-                    AppScreen(modifier =  Modifier.padding(innerpadding))
+                    AppScreen(modifier =  Modifier.padding(innerpadding), repository = Repository(this))
                 }
             }
         }
